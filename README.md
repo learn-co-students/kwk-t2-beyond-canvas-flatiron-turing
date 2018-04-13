@@ -5,34 +5,57 @@
 
 ## Beyond the Canvas
 
-While incredibly useful for all things `<canvas>`, p5 also offers a powerful library that abstracts common DOM actions. Tasks like adding html elements, selecting all elements of a certain type, and manipulating event listeners are all abstracted via p5.
+While incredibly useful for all things `<canvas>`, p5 also offers a powerful
+library that abstracts common DOM actions. Tasks like adding html elements,
+selecting all elements of a certain type, and manipulating event listeners are
+all abstracted via p5.
 
-In exploring this library, we are going to jump right in and work with some images of nature's most [majestic animal][hog-reference]: the county fair hog.
+In exploring this library, we are going to jump right in and work with some
+images of nature's most [majestic animal][hog-reference]: the county fair hog.
 
 ## Excited Swine
 
-Take a look at `mySketch.js`, which uses `Hog.js`. In `mySketch.js`, several p5 `img` objects are made and wrapped up within the custom `Hog` class that we made ourselves. The `Hog` class is responsible for keeping track of the p5 DOM elements position and excitement level. It is also responsible for managing the movement of the element via the `trembleWithExcitement` method.
+Take a look at `mySketch.js`, which uses `Hog.js`. In `mySketch.js`, we've got
+a `createHogs` function that maps over an array of images, taking several
+image URIs and wrapping them up within the custom `Hog` class. The `Hog` class
+is responsible for keeping track of the p5 DOM elements position and excitement
+level. It is also responsible for managing the movement of the element via
+the `trembleWithExcitement` method.
 
-Start up your server and take a look at what we have in the browser. Following, try commenting out the line in the `draw` function that activates the `hog.trembleWithExcitement` method. Inspect the results in the browser. Now we're talking...
+Start up your server and take a look at what we have in the browser. Following,
+try uncommenting the line in the `draw` function that activates the
+`hog.trembleWithExcitement` method. Inspect the results in the browser. Now
+we're talking...
 
-Naturally, the only problem with this browserification of hog excitement is that it's simply not _realistic_. You know as well as we that a county fair hog doesn't just _shake randomly_ without purpose: instead, as you approach them, their excitement levels are inversely proportional to the distance between you and them.
+Naturally, the only problem with this browserification of hog excitement is
+that it's simply not _realistic_. You know as well as we that a county fair hog
+doesn't just _shake randomly_ without purpose: instead, as you approach them,
+their excitement levels are inversely proportional to the distance between you
+and them.
 
 ## Making it Real
 
-Let's clean up this inaccurate representation of county fair hog behavior before David Attenborough has a heart-attack. By building on the existing structure and functionality of the code, we want to implement the following (please progress in order):
+Let's clean up this inaccurate representation of county fair hog behavior
+before David Attenborough has a heart-attack. By building on the existing
+structure and functionality of the code, we want to implement the following
+(please progress in order):
 
 **Hog Scientist**
   - Have the hog only jiggle when your mouse is over its image
 
 **Hog Farmer**
   - As our mouse approaches the center of any given hog, its excitement grows
-  - Inversely, the further away from the hog our mouse is, the less excited the hog is
+  - Inversely, the further away from the hog our mouse is, the less excited the
+  hog is
 
 
 **Hogfather (bonus)**
-  - Being fiercely territorial, as a hog approaches any other hog its excitement grows (and diminishes with distance)
+  - Being fiercely territorial, as a hog approaches any other hog its
+  excitement grows (and diminishes with distance)
 
-Don't forget to make use of the [p5-dom documentation!][p5-dom]. Specifically, consider making use of the `mouseX` & `mouseY` variables, as well as the `dist()` function!
+Don't forget to make use of the [p5-dom documentation!][p5-dom]. Specifically,
+consider making use of the `mouseX` & `mouseY` variables, as well as the
+`dist()` function!
 
 [p5-dom]: https://p5js.org/reference/#/libraries/p5.dom
-[hog-reference]: "https://tpwd.texas.gov/publications/pwdpubs/media/pwd_bk_w7000_0195.pdf"
+[hog-reference]: https://tpwd.texas.gov/publications/pwdpubs/media/pwd_bk_w7000_0195.pdf
