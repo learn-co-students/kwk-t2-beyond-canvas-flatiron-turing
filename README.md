@@ -59,3 +59,4 @@ consider making use of the `mouseX` & `mouseY` variables, as well as the
 
 [p5-dom]: https://p5js.org/reference/#/libraries/p5.dom
 [hog-reference]: https://tpwd.texas.gov/publications/pwdpubs/media/pwd_bk_w7000_0195.pdf
+<p data-visibility='hidden'>KWK-T2 Objectives</p>
